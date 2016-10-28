@@ -9,22 +9,34 @@ https://www.dim13.org/xlinux
 --- testlin ---
 Zum testen, ob das auf dem Zielsystem läuft, kann man testlin.exe nehmen. Das enthaelt in minimales System mit
 Setup+X11. 
-Uum Installieren:
+
+Zum Installieren:
+
 c:  (c kann durch jeden DOS Laufwerksbuchstaben einer HD Partition ersetzt werden)
+
 testlin.exe
  
 ---------------
 zum Testen:
+
 cd \linux
+
 linux.bat c
+
 login: root
+
 setup
+
 startx
+
 CTRL-ALT-BS
+
 CTRL-ALT-DEL
 
 --- Deutsch ---
+
 Hallo, bitte hiernach erst einmal \xlinux.txt lesen!
+
 Dann Xlinux mit "install <x>" installieren. <x> = Ziellaufwerksbuchstabe ohne :\
 
 Wenn sie kein IDE-System haben, MUESSEN sie NACH der Installation (s.o.) erst
@@ -41,27 +53,40 @@ zur Verfuegung gestellt! S.u.S.E uebernimmt natuerlich fuer diese Distribution
 KEINERLEI Support!!! Bitte nicht bei Problemen dort anrufen...
 
 Dann nach x:\linux gehen.
+
 linux.bat x
+
 login: root
+
 setup
-------------------------------------------------------------------------------
+
 startx - startet X-Windows
+
 CTRL-ALT-BS - beendet X-Windows
+
 :q! - beendet den vi editor
+
 ...
 
 --- English ---
+
 Start install.bat with just the destination drive letter. Eg: install c
 (NO :\)
 
 Go into directory linux
+
 linux.bat c
+
 login: root
+
 setup
-------------------------------------------------------------------------------
+
 startx - starts X-Windows
+
 CTRL-ALT-BS - quits X-Windows
+
 :q! - quits vi editor
+
 ...
 
 
