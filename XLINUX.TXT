@@ -1,0 +1,1318 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Xlinux - V960801
+
+
+
+Inhalt:
+
+
+Vorwort
+
+Was ist Xlinux
+
+Installation
+
+Kurzbeschreibung ausgewÑhlter
+Anwendungsprogramme
+
+Anhang
+
+
+
+
+Textbasierende Programme
+
+- Alles fÅr DOS User...
+- Mouseless Commander - Der NC Clone
+- SC - Das Spreadsheet
+- Vi - Editor
+- Joe - Editor
+- edit - deutscher Editor mit voller Tastatur und Menue-Steuerung
+- TeX/LaTeX - Das Satzsystem
+- Ghostscript - Druck von Postscriptdateien auf Standarddruckern
+- Fax - ,Faxen" von Text und Postscriptdateien
+- ssfile - Einfache B-Tree Isam Dateiverwaltung
+- MSQL/PQL - Die SQL Datenbanken
+- Lynx - Der Text-HTML Browser
+- Perl/Awk - Die textorientierte Programmiersprache
+- basic, bwbasic - Basic Interpreter
+- Linuxdoc-SGML - Konverter fÅr unterschiedliche Textformate
+- UDO - der vielseitigere Text Konverter - deutsche Shareware!
+- Groff - Der Textkonvertierer
+- Minicom, ecu, xc, kermit, rx/y/z+sx/y/z - Terminalprogramme
+- Gnuplot - Plotten von Graphen
+- Ldlas - Statitische Auswertungen - nutzt gnuplot
+- casio - Datentransfer zum und von Casio SF-4/8xxx Organizern
+- dbview - Listen und Konvertieren von Dbase III Dateien
+- tde - Editor fÅr Binaerdateien
+- pgp - Pretty Good Privacy - Daten verschluesseln etc.
+- recode - GNU Zeichensatz Konverter
+- pcmcia - Utilities fuer PCMCIA Interface
+- Chess, Tetris, Sasteroids, lizards - Spiele
+
+
+
+
+X11 Programme
+
+- X11R5 Server
+- Axe - Editor
+- Xcoral - Editor
+- Doc - Editor auch fÅr LaTeX...
+- ez - Andrew WYSIWYG Frontend fuer LaTeX...
+- lyx - Deutscher Frontend fuer LaTeX...
+- Xcalc - Taschenrechner
+- Calctool - Besserer Taschenrechner
+- Xspread - Tabellenkalkulation
+- Oleo - Die GNU Tabellenkalkulation
+- Nexs - Demo dieser Tabellenkalkulation
+- xmgr - Plotting Tool ala Gnuplot
+- Xlispstat - Statistikpaket in Lisp
+- Xpaint - Bitmap Zeichenprogramm
+- Xfig - Vektor Zeichenprogramm
+- Idraw - Vektor Zeichenprogramm auch fÅr doc...
+- Xv - Bildbetrachter und Konverter
+- Xgrab - Screenshots
+- Ghostview - Ansehen von Postscript Dateien
+- xhtml - HTML-Editor
+- Xmosaic - HTML Browser
+- Cbb - KontofÅhrung
+- addressbook - Auch deutsches Adressverwaltungsprogramm mit Tcl/Tk erstellt
+- Xinvest - Anlageverwaltung
+- plan - Terminkalendar - Planer
+- Tcl/Tk - Script X11 Programmentwicklung
+- Wine - Windows Emulator
+- xfileman und uc - Dateimanager
+- uc - Unix Cockpit - Dateimanager und mehr...
+- Seyon - X11 Terminalprogramm
+- xanim - X11 MPEG Player
+- xearth - Rotierende Weltkugel auf dem X11 Desktop
+- pcemu - DOS Emulator unter X11 fuer Textprogramme (TP,TC,Word...)
+
+
+
+Sonstiges
+
+- Bildbetrachter
+- MPEG Player
+- Photo-CD
+- Linux Dokumentationen
+- apmc/x - Advanced Power Management Utilitie
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+For english speaking users, please refer to the file /Library/readme on the cd rom.
+
+
+Bitte beachtet sie die ,GNU General Public Licence". Text unter `/Library/GNU.gpl'.
+Die Programme ssfile, xv und udo sind Shareware. Bei Nutzung ist die entsprechende
+GebÅhr zu entrichten. Siehe dazu die Informationen unter `/Library/readme.ssfile,
+readme.xv und udo.txt'. Alle andere Software unterliegt der GNU General Public Licence.
+Quelltexte dieser Programme befinden sich z.B. auf ,sunsite.unc.edu", ,tsx-11.mit.edu"
+und deren FTP-Spiegeln. Bitte beachten: FÅr die hier enthaltene Software, wird
+keinerlei GewÑhrleistungen, fÅr irgendeine Art, Beschaffenheit, Nutzbarkeit geleistet.
+Alle Risiken, BeschÑdigungen oder andere Nachteile, die aus dem Gebrauch oder 
+Nichtgebrauch dieser Software und der darin enthaltenen Informationen entstehen,
+schlie·en jegliche HaftungsansprÅchen gegen mich und/oder den Autoren der Software 
+aus. Die Verwendung erfolgt auschlie·lich auf eigene Verantwortung.
+
+
+Wichtig: xlinux und linux laufen nicht auf einer komprimierten Partition!!! Sie muss
+                vorher entkomprimiert werden!
+
+
+Viel Spass
+Peter Sieg
+
+P.S. Bitte schicken sie mir doch einfach einmal eine Postkarte, wenn sie Xlinux aus-
+probiert haben...
+
+
+Dieses Dokument ist Copyright ∏ 1996 bei Peter Sieg, Rabishauerstr.9, 37603 Holzminden.
+VervielfÑltigung jeglicher Art bedarf der vorherigen schriftlichen Genehmigung von mir.
+Xlinux darf nicht ohne dieses Dokument auf DatentrÑgern jeglicher Art vervielfÑltigt werden. 
+
+
+
+
+
+Vorwort
+
+Warum habe ich blo· diese Distribution zusammengestellt? Wie ist es dazu gekommen?
+Meine ersten BerÅhrungen mit Linux mÅssen so etwa um 1991/2 gewesen seien. Ich hatte mir 
+damals eine SLS Distribution auf ca. 30-40 Disketten von einem PD-HÑndler gekauft.
+Dann gings los... Mittels der ersten Disketten und zwei neu formattierten wurden die Boot
+und Root Disketten erzeugt. Boot Diskette in A: - Rechner aus/einschalten. Nach Auffor-
+derung die Root Diskette in A: einlegen und Return drÅcken. Partitionen anlegen. Format-
+ieren. Installieren der restlichen 35+ Disketten. Rechner neu starten, als Root einloggen...
+Erstmal alles Ausprobieren. UNIX - Tools waren da, sogar z.B. Minicom gab es schon. 
+Ansonsten, speziell im Vergleich zu den heute verfÅgbaren Programmen gab es recht wenig.
+Die Version war glaube ich 0.99pl13. X11 habe ich nie zum Laufen gekriegt...
+Mangels fÅr mich brauchbarer Anwendungsprogramme, konnte mich auch die Fastzination
+dieses freien Betriebssystems nicht davon öberzeugen, auf mein DOS+ zu verzichten.
+WÑhrend der Zeit mit diesem System, ist es mir mehr als einmal passiert, das ich irgendwel-che 
+wichtigen Dateien gelîscht oder Berechtigungen durcheinander gebracht hatte und nur eine 
+komplette Neuinstallation mir ein funktionierendes System zurÅck bringen konnte...
+
+Dann, es war Anfang 1995 auf einer ,Computer Fair" in den USA, bot ein ca. 60 jÑhriger, 
+wei·haariger Mann, vier Disketten mit der Aufschrift ,MiniLinux" und ein Ñlteres Magazin
+des ,Linux Journal" fÅr 8 US$ an. Auf meine Frage, was das denn sei, antwortete er ,ein 
+kleines aber feines Linux Paket, welches auf dem DOS Dateisystem lÑuft" Es interressierte
+mich brennend zu sehen, was das wohl war und was sich in der Zwischenzeit bei Linux getan
+hatte. Wieder Zuhause musste ich leider feststellen, das die zweite Diskette fehlerhaft war.
+Pech gehabt... Aber nach intensiver Suche in Mailboxen, fand ich das Paket bei einer Box in 
+Kanada. Eine Message zum Sysop, um die erlaubte Online Zeit fÅr mich herauf zu setzen und 
+schon konnte der Download beginnen... Dann die Disketten einlesen, ZusammenfÅgen, 
+Entpacken, das System einfach mittels der Batch Datei ,linux.bat" starten. Einloggen - und ich 
+war drin! Readme durchlesen. Setup ausfÅhren. startx eingeben - et voila X11! 
+Die Einfachheit der Installation und Konfigurierung hat bei mir einen tiefen positiven Eindruck 
+hinterlassen. Das war ja fast so einfach wie DOSEN-WINDOWS...
+
+Und es gab schon eine Menge Anwendungsprogramme mehr als damals... Bis zum heutigen 
+Xlinux war es allerdings noch ein weiter Weg (ca. 1 ´ Jahr!). CD-ROM's kaufen, Programme 
+installieren und testen, FTP Server abklappern... Ohne MiniLinux allerdings wÑre all dies fÅr 
+mich wohl nur sehr schwer mîglich gewesen.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Was ist Xlinux
+
+Xlinux ist in erster Linie eine Linux Distribution wie z.B. S.u.S.E, Slackware, LST, Red Hat, 
+Caldera und andere. Allerdings gibt es im Vergleich zu diesen ,gro·en" Distributionen, die von 
+einem ganzen Entwickler-Team stÑndig gepflegt - also fehlerbereinigt, erweitert und mit den 
+neuesten Versionen und Treibern versehen werden - einige gravierende Unterschiede:
+
+- Da ich allein an Xlinux arbeite und nur sporadisch Zeit dafÅr aufbringen kann, wird nur das  
+  fehlerbereinigt, was mir selbst - beim Testen und Arbeiten - auffÑllt.
+
+- Ich spiele einen Update nur ein, wenn es aus meiner Sicht sinn macht. Z.B. hatte ich schon 
+  X11R6, bin allerdings aufgrund des gestiegenen Memory Bedarfs wieder zurÅck zu X11R5
+  gegangen (Nur X11-Server). 
+
+- Ich habe nur einige Programme selbst kompiliert. Die meisten werden in der auf CD-ROM's 
+  und/oder FTP Servern vorhandenen Binaerversion installiert.
+
+- Die oben erwÑhnten Distributionen enthalten z.B. die komletten Quelltexte, C-Compiler, 
+  HOWTO und andere Dokumente, Manual Pages  etc. etc. etc.
+
+- Xlinux im Gegensatz legt den Schwerpunkt auf Anwendungsprogramme, die schon fertig
+  installiert sind.
+
+- Die Installation obiger Distribution besteht meistens aus dem Booten mit entsprechenden 
+  Boot und Rootdisketten, Einrichten einer oder mehrerer Partitionen auf der Festplatte (mit
+  vorherigem Backup!) und anschlie·endem Aufspielen der gesamten oder Teile der CD.
+  * (Dies ist inzwischen Dank UMSDOS+Kernel 2.0+Ramdisk+Module bei gro·en 
+      Distributionen auch ohne Boot/Root-Disks und Partiononieren mîglich)
+
+- Xlinux besteht aus einer gepackten DOS Datei von weniger als 30MB. Die Installation ist
+  eigentlich nur das Entpacken dieser Datei. Diese Datei kann mit jedem DOS Backup Pro-
+  gramm weggesichert werden. Wenn man erst einmal als Root User wichtige Systemdateien 
+  gelîscht hat, oder Zugriffsrechte ,verbogen" hat, weiss man dieses zu schÑtzen. Das hei·t
+  auch, das nach der erfolgten Konfiguration und evtl. Installationen zusÑtzlicher Pakete, man
+  einfach (mit Geiherkralle = CTRL-ALT-DEL) das Linux System herunterfahren kann, das
+  Verzeichnes \LINUX einfach packen und archivieren kann.
+
+
+
+
+
+
+
+
+Installation
+
+Xlinux braucht zur Installation ca. 105MB. Danach belegt es 85MB ohne Archiv-Datei.
+Wenn sie eine CD-ROM mit Xlinux haben, ist es ein wenig einfacher. Wechseln sie zum 
+Laufwerk, auf welchem das xlinux Verzeichnis ist. Geben sie ein:
+
+install x
+x		= Laufwerksbuchstabe auf dem xlinux installiert werden soll, ohne :\
+
+Auf dem Ziellaufwerk ,x:" wird ein Verzeichnis ,\linux" angelegt, in welchem sich das
+Linux System befindet.
+
+Das wars... 
+
+Gehen sie in das neue \linux Verzeichnis. Starten die ,linux.bat" wieder mit dem jetzt aktuellen 
+Laufwerksbuchstaben. Einloggen als ,root".
+,setup" aufrufen und das System einstellen. Danach unbedingt mit ,more /Library/liesmich" 
+diese Mini-Doku lesen!!!
+
+Auf der Xlinux-CD befinden sich folgende Verzeichnisse:
+
+\xlinux		- xlinux gepackt und aufgeteilt fÅr 1,44MB Floppy's. Kann aber von CD
+		   wie oben gezeigt in einem Rutsch installiert werden. RAR sucht selbst
+		   alle Teile zusammen.
+\howtos	- Die Howto Dokumente...
+\faq		- Fragen und Antworten zu Linux + Linux Dokumentations Dateien
+                          - usg	- User Guide
+		   - nag	- Network Administrator Guide
+		   - khg	- Kernel Hackers Guide
+		   - ...
+\other		- Andere kleine Linux Pakete:
+		   - testlin	- Version zum Testen, ob xlinux und X11 auf einem
+				   Rechner laufen. Passt dank der 2m Tools auf eine
+				   3,5" Floppy!
+		   - textlen	- Ist Xlinux ohne X11 und alles was dazu gehîrt...
+				   Belegt nur ca. 25MB auf der Platte und lÑuft mit 4MB RAM.
+				   EnthÑlt auch z.B. vi, joe, sc, ssfile, pql, httpd, lynx etc...
+		   - microlin	- Microlinux. 1 Floppy fÅr das Basis System, plus
+				   ein TAR File fÅr X11R5 (+2 fÅr X11R6!).
+		   - krnlcomp	- Basis System plus Kernel Sourcen und C-Compiler
+				   zum Kompilieren des Kernels.
+\packages	- Viele, viele anderen TGZ Container mit bisher noch nicht installierten
+		   Paketen. (FÅr die meisten dort habe ich keine Verwendung, - aber 
+		   vieleicht sie...)
+
+
+
+
+Installieren eines anderen Kernels:
+
+WÑhlen sie einen passenden Kernel aus dem Verzeichnis \kernel der CD aus.
+(Siehe auch die nÑchste Seite fÅr eine öbersicht der vorhandenen Kernel)
+Unter DOS oder linux kopieren sie die entsprechnde Datei einfach
+nach \linux\vmlinuz. Da diese Datei ja schon existiert hat, kommt UMSDOS
+unter Linux auch bei kopieren unter DOS nicht durcheinander. Evtl. werden 
+ich spÑter hier eine Batch/Scriptdatei schaffen, in der ein Kernel per Pickliste
+ausgewÑhlt und installiert werden kann (Kommando: kernels). Beachten sie
+bitte, das bei Installation eines Kernels, welcher nicht zur Rechnerhardware
+passt, das System nicht mehr booten kann, und nur ein anderer Kernel weiter-
+helfen kann! 
+
+
+Installieren eines anderen X Servers:
+
+WÑhlen sie einen passenden X Server aus dem Verzeichnis \xserver der CD aus.
+Die Server liegen als gepackte tgz Datei vor. Ein Installation ist deshalb nur unter
+Linux mîglich:
+
+(Als user: root)
+cd /
+tar zxvf  /cdrom/xserver/<name>.tgz
+(tgz Datei wird entpackt...)
+sh /install/doinst.sh
+(Hier wird folgendes ausgefÅhrt:
+ rm /usr/X11/bin/X
+ ln -s /usr/X11/bin/<X Server>  X;
+ der alte Xserver kann gelîscht werden.)
+
+Beachten sie bitte, das die Angaben in Xconfig zu dem X Server passen mÅssen!
+Ohne énderungen lÑuft wohl nur der VGA16 Server! Bei Problemen kînnen die
+XFree86-Howtos weiterhelfen...
+
+Mit setup (oder xserverconfig) kann schon zwischen Xmono und VGA16 Server
+umgeschaltet werden!
+
+
+In obiger Weise werden auch andere tgz Pakete, welche mit Bezug zum / (root)
+Verzeichnis gepackt wurden, installiert...
+
+
+
+
+
+
+
+
+
+Es folgt eine Kurzbeschreibung der auf CD vorhandene Kernel:
+
+
+Die Kernel sind mit freundlicher  Erlaubnis der S.u.S.E GmbH aus deren Distribution zur
+VerfÅgung gestellt. Vielen Dank! Der nachfolgende Text ist ein Auszug aus der 
+entsprechenden S.u.S.E. Dokumentation:
+
+
+
+
+
+
+
+Alles fÅr DOS User
+
+Folgende Kommandos sind vorhanden:
+
+- dir		- Anzeigen eines Verzeichnisinhaltes
+- md		- Verzeichnis erstellen
+- rd		- Leeres Verzeichnis lîschen
+- del		- Loeschen von Dateien
+- delltree	- Volles Verzeichnis lîschen
+- copy		- Kopieren von Dateien
+- move		- Verschieben von Dateien
+- a:		- Mounted eine Floppy in A: nach /a
+- cdrom	- Mounted eine CD-ROM nach /cdrom
+- cd		- Wechselt Verzeichnis
+- Type		- Listet Datei
+
+Wichtige UNIX Kommandos:
+
+- pwd		- Zeigt aktuelles Verzeichnis
+- vi		- Standard Editor
+- joe		- Editor mir Wordstart Kommandos
+- ps		- Process Status
+- kill		- Process beenden
+- startx		- Startet die X11 OberflÑche
+
+Weitere Tastenkombinationen und Hinweise:
+
+CTRL-ALT-DEL	- System sauber herunterfahren
+ALT F1-F6		- Umschalten der virtuellen Konsolen
+R-SHIFT-PgUp/	-  ZurÅck-/Vorrollen in den Konsolen
+PgDn
+CTRL-ALT-		- Von X11 zu den Konsolen
+F1-F6
+CTRL-ALT-F7	- ZurÅck zu X11
+CTRL-ALT-BS	- X11 Server beenden
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mouseless Commander - mc
+
+Norton Clone. Dateien und Verzeichnisse anlegen, lîschen, verschieben, umnennen,
+Dateien ansehen, editieren und ausfÅhren. Tastenbelegung wie NC (siehe unteren 
+Bildschirmrand...)
+
+
+Spreadsheet - sc
+
+Tabellenkalkulation. öbersicht der Befehle mit `?', Ende mit `q'. Befehle sind nicht
+1-2-3 kompatibel. Siehe auch Tips und Tricks...
+
+
+Editor - vi
+
+Bildschirm Editor. Arbeitet in drei Modi. Grundbefehle:
+
+	h	- Cursor ein Zeichen nach links
+	j	- Cursor eine Zeile nach unten
+	k	- Cursor eine Zeile nach oben
+	l	- Cursor ein Zeichen nach rechts
+	i	- EinfÅgen an Cursorposition; jetzt werden alle Zeichen in den Text
+                          eingefÅgt bis zu...
+	<ESC>- EinfÅgen beenden
+	x	- Zeichen unter Cursor lîschen
+	:	- Kommando Modus
+		   - q! - vi beenden OHNE speichern
+		   - w  - Text speichern
+		   - wq- Text speichern und vi beenden
+
+
+Editor (Wordstart Kommandos) - joe
+
+Befehle wie bei Wordstar...
+
+
+Editor Crisp - PD Version
+
+Dieser Editor scheint viele andere Editoren emulieren zu koennen? Ueber Makros
+erweiterbar. Auch unter X11 lauffaehig... siehe /usr/local/crisp*
+
+
+
+Deutscher Editor m.a.r.s_e (ala DOS-Edit)
+
+Aufruf mit ,/usr/bin/edit". Dateien unter /usr/local/e/*. Volle DOS Tastatursteuerung.
+Menuesystem. Wirklich mal eine Wohltat nach all den englischen Programmen...
+
+
+
+Satzsystem TeX/LaTeX - texmgr
+
+texmgr startet eine einfache MenueoberflÑche zur Erledigung aller Aufgaben von der
+Erstellung eines Dokumentes bis zum Druck. Der Ablauf ist generell:
+
+	- Erstellen eines TeX/LaTeX Dokumentes (*.tex) mit einem Editor (vi).
+	- Umsetzen *.tex nach *.dvi.
+	- Umsetzen *.dvi nach *.ps (Postscript Datei).
+	- Layout Kontrolle der *.ps Datei mit ghostscript (dgs auf VGA) bis ok.
+	- Ausdruck *.ps mit pgs auf vorher eingestellten Drucker.
+
+Die Befehle von TeX/LaTeX hier erklÑren zu wollen wÅrde den Rahmen dieser
+KurzÅbersicht sprengen. Ich empfehle entsprechende FachbÅcher. Einige Angaben
+kînnen den Dateien /Library/texmin.* entnommen werden.
+
+
+Faxen von Text- und Postscriptdateien - fax...
+
+Die Erkennung von Text- oder Postscriptdateien erledigt das fax script automatisch.
+Textdateien kînnen selbst nach fax umgesetzt werden, Postscript mit Hilfe von
+ghostscript. In der script Datei `fax' unter /usr/bin sind einige Einstellungen wie
+z.B. Schnittstelle, eigene Kennung etc. anzupassen! Siehe auch /library/fax.1
+FÅr ein Online Hilfe starten sie fax mit dem Parameter `help'.
+
+
+Dateiverwaltung - ssfile
+
+Hier kînnen sie MenuegefÅhrt Datendateien erstellen, ergÑnzen, SÑtze suchen etc.
+Im Verzeichnis /usr/lib/ssfile/* befinden sich Beispiele und Dokumentation...
+Achtung: ssfile ist Shareware. Siehe dazu auch `/Library/readme.ssfile'.
+
+
+Datenbank - msql/pql
+
+Vollwertige SQL Datenbank in Client/Server Konzept. Der Server muss erst mit
+msqld & gestartet werden. msql dient zum manipulieren von Datenbanken. 
+msqladmin zum Erstellen und Lîschen von Datenbanken. Die Programme sind
+unter /usr/local/Minerva/ zu finden. Dort liegt unter ,doc" auch eine Dokumentation
+im Postscriptformat. Siehe auch Tips und Tricks... PQL arbeitet nicht im Client/Server
+Modell, ist aber auch z.B sehr gut zur Integration in dynamischen HTML-Seiten geeignet.
+
+
+HTML Browser fÅr ASCII-OberflÑche - lynx
+
+Beim Start wird die lokale Homepage `/usr/lib/html/home.html' aufgerufen, mit 
+der einige Dokumente unter `/Library' gelesen werden kînnen. Konfigurations-
+einstellungen sind evtl. in `/usr/local/lib/lynx.cfg' vorzunehmen.
+Siehe auch unter `/var/httpd/docs...'
+
+
+
+
+Sprachen zur Listen/Text-Verarbeitung - perl / awk
+
+Viele enthaltene Programm sind eigentlich perl scripts:
+
+	- /usr/bin/sqprint	- Druck zwei Seiten auf einer auf HPL Druckern
+	- /usr/bin/p2p		- siehe sqprint - geht gleich auf Drucker
+	- /usr/bin/pstree	- Gibt Verzeichnisbaum in Postscript Datei aus
+	- /usr/bin/i2ps		- Gibt ASCII Datei nach Postscript aus
+	- /usr/bin/nenscript	- wie i2ps, siehe auch pstext, a2ps, a2x
+	- /usr/bin/mpage	- Gibt mehrere Seiten auf einer in Postscript aus
+	- /usr/bin/padr		- Nutzt mpage zum 4-Seitendruck von /data/address
+
+Zur EinfÅhrung in Perl empfehle ich dringend entsprechende Literatur.
+
+
+
+Textformat Umsetzer - Linuxdoc-SGML/UDO
+
+Verschieden Programme zur Umsetzung von Linuxdoc Textdateien nach z.B.
+HTML und LaTeX/TeX. Siehe Verzeichnis `/usr/local/linuxdoc-sgml/' fÅr
+Dokumentation. UDO ist eine deutsche Entwicklung und vielseitiger als
+Linuxdoc-SGML! Udo ist Shareware, bitte registrieren sie sich, wenn sie
+das Programm nutzen! Siehe /Library/*udo*.
+
+
+Terminalprogramm - minicom / xc / ecu / kermit
+
+Einfach einmal starten, Sind wie DOS Programme Åber TastenkÅrzel und Menues
+konfigurierbar und steuerbar. Arbeiten automatisch mit externen Protokollen (rx-z,
+sx-z) zusammen. Ecu unterstuetzt auch Kermit und Compuserve Protokolle...
+kermit ist ein Klassiker unter der Terminalprogrammen und fuer sehr, sehr viele
+Systeme verfÅgbar. Entsprechende Buecher ueber kermit sind erhaeltlich.
+
+
+Spiele - tetris / sasteroids / lizards
+
+Tetris ist fÅr ASCII OberflÑchen geeignet. Sasteroids und lizards laufen nur auf dem console
+Bildschirm im VGA Modus. Programme sind selbsterklÑrend...
+
+
+
+
+Postscriptdateien ansehen bzw. drucken - dgs / pgs
+
+dgs <name>.ps zeigt eine Postscript Datei auf dem VGA Schirm an. BlÑttern durch
+<Return>.
+
+pgs <name>.ps druck eine Postscript Datei auf den vorher per setup eingestellten
+Drucker aus.
+
+Einige Postscriptdateien:
+/Library/INFO-SHEET.ps		- Allgemeine Infos Åber Linux
+/Library/guide.ps			- Linux Handbuch
+/Library/L-Kurs_1.4.5.ps		- Linux Kurs in Deutsch!
+/Library/infos				- Linux Guide in Deutsch!
+/usr/local/Minerva/doc/msql.ps	- msql Dokumentation
+Auf der CD unter /faq/xxx		- befinden sich Network Administrator Guide,
+					   Kernel Hackers Guide, etc...
+
+
+
+X11R5 + FVWM
+
+Es ist X11R5 installiert. Per Setup kînnen zwischen Xmono und VGA16 Server
+umgeschaltet werden. Server fÅr anderen Grafikkarten mÅssen von Hand installiert
+werden (siehe Installation). Konfigurationsdatei ist `/usr/X11/lib/X11/Xconfig'.
+Achtung: éndern sie, wenn die énderungen in Xconfig funktionieren die Datei
+YXconfig. Diese Datei Åberschreibt bei setup die Xconfig Datei!
+
+Konfigurationsdatei fÅr den Window Manager: `/usr/X11/lib/X11/fvwm/system.fvwmrc'
+Backup Datei ist die Ysystem.fvwmrc im gleichen Verzeichnis.
+
+
+Editoren - xedit, axe, xcoral, doc
+
+xedit ist der einfachste und kleinste X-Editor. ein hat keine Dateiauswahlbox. axe und 
+xcoral sind da erheblich komfortabler. xcoral unterstÅtzt auch z.B. C++ Programmierer.
+doc ist Editor, der die Funktionen und Menuepunkte abhÑngig von der Datei-Extension
+zur VerfÅgung stellt. *.doc z.B. erlaubt das Erstellen von TeX/LaTeX Dokumenten.
+Siehe auch `/Library/doc.1'.
+
+
+Andrew User Interface System - Wordprocessor ez
+
+Dateien unter /usr/andrew/*. Frontend fuer TeX/LaTeX/Groff. Fast WYSIWYG Text-
+system unter X11. Postscript-Ausgabe direkt nach Lpr..., wird noch nach pgs umgeleitet!
+
+
+Deutsches X11 Frontend fuer TeX/LaTeX - lyx
+
+Dateien unter /usr/local/lyx/*. Braucht leider schon LaTeX2e. Muss entweder angepasst
+werden, oder LaTeX muss upgedated werden.
+
+
+Kalkulationsprogramme - xcalc, calctool, xspread, oleo, nexs
+
+xcalc und calctool sind Taschenrechner, die anderen Programme sind Tabellen-
+kalkulationen.  xspread += sc mit X OberflÑche und Grafik. Das Menu lÑ·t sich mit der
+rechten Maustaste aufrufen. ZusÑtzlich kînnen verschiedene Grafiken erzeugt werden.
+Das Dateiformat ist mit sc kompatibel. oleo ist die GNU Tabellenkalkulation. Sie hat
+auch wieder eine andere Befehlsstuktur. Siehe dazu `/Library/oleo.howto'. Nexs ist
+die Demo eines komerziellen Produktes, welches wohl keine WÅnsche mehr offen
+lÑ·t. Die Demo lÑ·t sich zur vollen Version aktivieren. Siehe dazu `/Library/nexs.txt'.
+
+
+Statistikpaket - xlispstat
+
+Siehe Verzeichnis `/usr/local/xlispstat/*'. fÅr weitere Informationen.
+
+
+
+
+
+Zeichenprogramme - xpaint, xfig, idraw
+
+xpaint ist ein Bitmap-Zeichenprogramm. xfig und idraw sind Vektor-Zeichenprogramme.
+Siehe auch `/Library/idraw.1'.
+
+
+Grafikutilities - xv, xgrabsc, ghostview
+
+xv DER Grafikkonverter. Konvertieren der unterschiedlichsten Formate. Kann auch
+Bilder als Desktop Hintergrund laden. Siehe Menuepunkt `Utilities/Desktop'. Bilder
+befinden sich einige unter `/usr/lib/pictures/*'. xgrabsc erlaubt das ,Schie·en" von
+Bildschirm-Hardcopies in verschiedenen Formaten. ghostview erlaubt das Betrachten
+von Postscript Dateien in X11. Auch ein Auszug von einzelnen Seiten ist mîglich.
+Achtung: xv ist Shareware. Siehe dazu auch `/Library/readme.xv'.
+
+
+Tcl/Tk und cbb, addressbook
+
+Tcl/Tk ist eine Script-Programmentwicklungsumgebung. Einige Beispiele befinden
+sich unter `/usr/lib/tk/demos/*'. Die Demos lassen sich aus dem X11 Menu aufrufen.
+cbb - Check Book Balancer = KontofÅhrung ist auch mit Tcl/Tk und perl geschrieben.
+Wichtig ist ,option add *font fixed" zu setzen oder vor -text ,..." -font fixed einzufÅgen, da
+unter xlinux nicht alle X11 fonts zur VerfÅgung stehen. addressbook ist eine volle
+Addressdatei auch in deutscher Sprache.
+
+
+wine, xmosaic, seyon
+
+wine der Windows Emulator. Wenn ihre Windows-HD nach /c gemountet ist, rufen sie
+einfach einmal `wine sol.exe' auf. Wenn dieses Programm erst einmal fertig ist, kînnen
+sie die meisten Windows Programme damit unter linux einsetzen!
+xmosaic ist ein grafischer HTML Browser. Homepage bei Start Åber das X11 Menue ist
+dieselbe wie bei lynx. Auch der httpd Server daemon ist installiert. Bitte vorher mit httpd & 
+starten! Die eigene Adresse ist die Loopback-Adresse 127.0.0.1. Sehen sie mal unter der 
+Hotliste nach...
+seyon ist ein X11 Terminalprogramm a la minicom.
+
+/usr/bin/sysres.dll 		- wird von Wine benoetigt!
+/etc/wine.conf 			- Konfigurationsdatei fuer Wine.
+(Vor Start von z.B. sol.exe, muss das Laufwerk auf dem Windows installiert ist
+unter /c gemountet werden. Z.B. mount -t msdos /dev/hda1 /c)!!!
+
+/usr/lib/html/UserGuide/* 	- XMosaic User Guide; Load Local XMosaic.0.html
+
+
+
+Dateimanager - xfileman und uc
+
+uc ist in deutscher Sprache...
+
+
+
+pcemu - DOS Emulator
+
+Unter /usr/local/pcemu/*. Benoetigt eine DOS 1,44MB Boot Floppy. Herstellung:
+Unter DOS:
+format a: /S
+Unter Linux:
+cd /usr/local/pcemu
+mount -t msdos /dev/fd0 /mnt
+cp programs/* /mnt
+umount /mnt
+...Man kann auch ein Image der Boot Floppy nutzen. Herstellung:
+(DOS Boot Floppy in a:)
+cp /dev/fd0 DriveA
+Ich habe Turbo Pascal 5.5, MS-Word 5.0 und verschiedene andere Textprogramme
+ohne Probleme laufen gehabt. Serielle/Parallele Schnittstellen stehen nicht!
+zur Verfuegung...
+
+
+
+Tips und Tricks zu Xlinux
+
+
+
+Diese Artikelreihe wird auf individuelle Einstellungen, besondere Kommandos, einfache Tips 
+und Tricks, die das Arbeiten mit Xlinux leichter machen,  eingehen.
+
+
+Ich hoffe die Installation von CD-ROM hat geklappt. Evtl. musste erst noch einer der anderen 
+Kernel installiert werden, aber danach sollte sich Xlinux mit dem fahrbigen Login-Screen 
+melden. ,Setup" sollte auch schon ausgefÅhrt sein, um Grundeinstellungen wie Tastatur, Maus, 
+Modem, CD-ROM etc. erledigt zu haben.
+
+
+Ich selbst nutze Xlinux, zur Verwaltung einer Adress(Text)datei. Einigen Tabellenkalkula-
+tionsblÑttern, um Faxe zu verschicken, BBS anzurufen, HTML-Dateien - Client - Server aus- 
+zuprobieren und einfach alles was Interessant ist...
+
+
+
+Adressdatei:
+
+
+Sollte unter ,/data/Address" als einfache ASCII-Datei angelegt sein. Das Kommando 
+,/usr/bin/padr" wandel die Textdatei mit Hilfe von ,/usr/bin/mpage" in eine Postscript-Datei 
+um, bei der vier normale Seiten auf eine Seite zusammengefa·t werden. Mit ,/usr/bin/pgs" 
+wird die unter ,/tmp/padr.ps" erzeugte Postscript-Datei anschlie·end auf dem Drucker 
+ausgegeben. StandardmÑ·ig wird A4 Format genutzt. Bei mir erfolgte der Druck allerdings 
+Åber die RÑnder hinweg - wahrscheinlich ein Einspannproblem? Ein EinfÅgen von ,-m50" im 
+,mpage" Aufruf in ,/usr/bin/padr" verringert den Druckbereich in diesem Fall um 50 Punkte 
+sowohl von oben und unten, als auch von links und rechts. Mehr Hinweise zu ,mpage" unter 
+,/Library/mpage.1". Ich habe den erhaltenen komprimierten Ausdruck mit allen Adressen, 
+Telefonnummern, PIN-Nummern, etc. immer dabei...
+ 
+
+
+Geburtstage und andere besondere Tage:
+
+
+Vergessen sie auch immer irgendwelche Festtage? Hier folgt eine simple Abhilfe. Unter 
+,/data/events" legen sie eine einfache Textdatei an, in der besondere Tage in folgendem Format 
+pro Zeile aufgefÅhrt sind:
+
+mm/dd   text............
+12 / 26   Mein Geburtstag....
+
+Wichtig ist der Monat als erste zwei Zeichen. Mit folgendem kleinen Script unter 
+,/usr/bin/events", werden alle Zeilen ausgegeben, die fÅr den aktuellen Monat gelten:
+
+
+
+{Dateiinhalt von /usr/bin/events}
+
+#!/bin/sh
+grep `date +%m` /data/events | more
+
+
+
+Wenn dann noch ein Eintrag des neuen Kommandos in die eigene ,.profile" im HOME-
+Verzeichnis erfolgt, wird das Kommando bei jedem Einloggen ins System automatisch 
+ausgefÅhrt.
+
+
+
+Faxen machen:
+
+
+Ein Aufruf von ,/usr/bin/fax help" zeigt alle Optionen dieses Kommandos. Ich nutze fast nur 
+das Senden von Faxen. Der Aufruf hierzu ist: fax send <Fax-Nummer> <Datei>. Datei kann 
+eine ASCII Datei oder eine Postscript-Datei sein. Allerdings sollte das Kommando ,fax", 
+welches nichts anderes als ein Shell-Script ist, vorher noch konfiguriert werden. Folgende 
+Einstellungen sind zu ÅberprÅfen und gegebenenfalls zu Ñndern:
+
+{Auszug aus /usr/bin/fax}
+
+# The device to which the fax modem is connected (e.g. ttya for
+# /dev/ttya).  Use a dial-out (cua) device if sharing modem with
+# dial-out programs.
+# cua0 = com1; cua1 = com2...
+
+DEV=cua1
+
+# The type of fax modem commands to use.  Un-comment one of the
+# following 3 lines depending on your modem.
+
+# CLASS=1
+CLASS=2
+# CLASS=2.0		# doesn't work yet
+
+# Your fax number in international format, 20 characters maximum.
+# Use only digits, spaces, and the "+" character.
+# Ihre FAX/TEL Nummer als Absenderinformation und fÅr RÅckfragen
+
+FROM="+49 5531 10457"
+
+# Your name as it should appear on the page header.
+# Absendername
+
+NAME="Peter Sieg"
+
+Zur Vereinfachung beim Fax senden, kînnen sie auch das Kommando ,/usr/bin/xfax" nutzen, 
+das nach einem Dateinamen und einer Faxnummer fragt, und dann den Rest erledigt.
+
+
+Tabellenkalkulation - sc und xspread:
+
+
+Ich nutze obige Tabellenkalkulationen, um den öberblick Åber die monatlichen Einnahmen und 
+Ausgaben zu behalten. Hier einige Hinweise zur Bedienung:
+
+sc <Dateiname>	- lÑdt gleich beim Start die Datei <Dateiname>.
+
+?			- Geht zur Online-Hilfe...
+
+<			- Eingabe von linksbÅndgen Text
+,			- Eingabe von zentrierten Text
+>			- Eingabe von rechtsbÅndigen Text
+
+
+=			- Eingabe von Zahlwerten und Formeln
+			   Zahlwerte sind +/-0..9.0..9 z.B.: 123.45; -9.007...
+			   Formeln beginnen mit @ z.B.: @sum(d3:d10)
+
+m			- Markieren Zellinhalt zum Kopieren
+c			- Markierten Zellinhalt in aktuelle Zelle kopieren, dabei Anpassung
+			  von Zellreferenzen
+x			- Aktuelle Zelle lîschen
+
+W			- Datei speichern unter einzugebenden Namen
+
+P			- Datei wie am Bildschirm zu sehen ausgeben. Wenn man als 
+			  Dateiname ,| lpr" eingibt, gehts gleich zum Drucker...
+
+q			- Programm beenden. 
+
+
+
+
+
+
+
+
+
+Die vorhandenen Postscript-Dateien und ihr Ausdruck:
+
+
+Postscriptdateien ansehen bzw. drucken - dgs / pgs:
+
+dgs <name>.ps zeigt eine Postscript Datei auf dem VGA Schirm an. BlÑttern durch
+<Return>.
+
+pgs <name>.ps druck eine Postscript Datei auf den vorher per setup eingestellten
+Drucker aus.
+
+Einige Postscriptdateien:
+/Library/INFO-SHEET.ps		- Allgemeine Infos Åber Linux
+/Library/guide.ps			- Linux Handbuch
+/Library/L-Kurs_1.4.5.ps		- Linux Kurs in Deutsch!
+/Library/infos				- Linux Guide in Deutsch!
+/usr/local/Minerva/doc/msql.ps	- msql Dokumentation
+Auf der CD unter /faq/xxx		- befinden sich Network Administrator Guide,
+					   Kernel Hackers Guide, etc...
+
+
+
+Ein kleiner ,Taschenrechner" selbstgemacht:
+
+
+Dazu nehme man:
+
+1. Ein vorhandenes Programm, welches die eingendliche Arbeit (hier die Berechnung)
+    durchfÅhrt, und
+
+2. Ein Programm, welches dem User-Programm eine freundlichere Oberflaeche gibt.
+
+
+Fuer 1. eignen sich z.B ,bc" oder ,expr". Fuer 2. kommt fuer die ASCII Oberflaeche
+z.B. ,dialog" in Frage. Mit der Shell-Script und ,dialog" sind z.B die unter /sbin/*config
+vorhandenen Programme zur Konfiguration von Tastatur, Maus etc erstellt.
+
+
+Hier nun das Programm mit {eingefÅgten ErlÑuterungen - Diese nicht mit abgetippt!}: 
+Da das Programm aus /sbin/swapconfig erzeugt wurden, sind Aehnlichkeiten nicht rein
+zufaellig...
+
+#!/bin/sh
+{Starten einer Sub-Shell - sollte man immer machen. mit chmod 755 wird
+ das Programm dann direkt ausfÅhrbar...}
+
+SWAPSIZE=0
+{Initialisieren der Shell-Variable ,SWAPSIZE" mit dem Wert ,0"...}
+
+while [ "$SWAPSIZE" != "" ]; do
+{Solange bis ,SWAPSIZE" ein Leerstring ist...}
+
+DF=`expr $SWAPSIZE`
+{Noch eine Shell-Variable, ,DF" bekommt die Ausgabe der Programms
+ ,expr", welches mit dem Parameterstring ,SWAPSIZE" aufgerufen  
+ wird...}
+
+cat << EOF > /tmp/tmpmsg
+{Das sieht man haeufig! Alles bis zu ,EOF" wird durch ,cat" in die
+ Datei ,/tmp/tmpmsg" ausgegeben...}
+
+This is the last result from expr:
+$DF
+{$DF wird durch die Shell mit dem aktuellen Wert ersetzt...}
+
+Please enter the next expr string:
+EOF
+ dialog --title "CALCULATOR" --inputbox "`cat /tmp/tmpmsg`" 20 70 \
+ 2> /tmp/SeSSize
+{Hier ist er nun, der ,dialog" Aufruf... 
+  --title = ,Titelzeile";  
+  --inputbox = ,Meldung fuer Eingabeaufforderung"
+     	- ist hier der vorher erstellte Inhalt der Datei ,/tmp/tmpmsg", die
+            mittels `cat /tmp/tmpmsg` von der Shell eingelesen wird...
+     20 Zeilen x 70 Zeichen Grî·e der Box
+     Eingabe wird in die Datei ,/tmp/SeSSize" ausgegeben
+}
+
+ if [ $? = 1 -o $? = 255 ]; then
+{Wenn Abbruch gewuenscht...}
+  rm -f /tmp/SeSSize /tmp/tmpmsg
+  clear
+  exit
+ fi
+
+{Sonst fuelle die Shell-Variable ,SWAPSIZE" mit dem Eingabestring...}
+ SWAPSIZE="`cat /tmp/SeSSize`"
+ rm -f /tmp/SeSSize /tmp/tmpmsg
+done
+{Noch nicht vergessen? Wenn Eingabe nicht leer, noch eine Schleife...}
+
+clear
+
+
+Das war doch eigendlich ziemlich einfach - oder...
+
+
+Arbeiten mit msql der SQL Client/Server Datenbank
+
+
+Drei Programme sind fÅr das Arbeiten nîtig:
+
+msqld		- Ist der Datenbank backend Server, er muss vorher immer mit ,msql &"
+		  gestartet werden.
+
+msql		- User Interface = Haupt-Client-Programm zum Arbeiten mit Tabellen und
+		  Daten.
+
+msqladmin	- Datenbank Administrations Programm = Erstellen und Lîschen von Daten-
+		  banken.
+
+Angelegt ist eine Datenbank mit dem Namen ,test". In der ist eine Tabelle mit dem Namen
+,test". Indieser Tabelle gibt es zwei Felder, name = char(15) und value = real.
+
+Angelegt wurde die Tabelle mit:
+
+{Erst ,msqld $" starten, muss in der ,ps" Anzeige erscheinen. Dann msql starten...}
+
+create table test
+(
+name  char(15),
+value  real
+)
+\g
+
+,\g" fÅhrt das SQL Kommando aus...
+
+
+Werte werden mit folgendem Befehl eingefÅgt:
+
+insert table test(name,value)
+values(,pi",3.1416)
+\g
+
+
+Abfrage der Werte:
+
+select * from test
+\g
+
+oder
+
+select value from test
+where name = ,pi"
+\g
+
+
+
+
+
+Arbeiten mit dem HTTP Server und Xmosaic
+
+
+Als erstes muss der HTTP Server mit ,httpd &" im Hintergrund gestartet werden.
+
+öber Xmosaic (oder Lynx) kann mit der URL: http://127.0.0.1 auf den auf dem lokalen
+Rechner laufenden Server zugegriffen werden. Xmosaic unterstuetzt leider in dieser alten
+Version nicht ,forms/input etc".
+
+Die Konfigurationsdateien liegen unter ,/var/httpd/*".
+
+Alle Dateien dort die im ,cgi-bin" Verzeichnis liegen, werden beim Zugriff ausgefÅhrt. 
+Das Ergebnis der Programmaufrufs, wird zum Client zurÅckgeschicht!
+
+
+Einige Beispiele:
+
+http://127.0.0.1/cgi-bin/fortune		- gibt Ausgabe von ,fortune" zurÅck
+
+http://127.0.0.1/calendar.html		- gibt Monat/Jahr mittels ,cal" zurÅck
+
+
+
+
+
+
+
+Anhang - 1. Die wÑhrend der Arbeit an xlinux gepflegte ,liesmich" Datei...
+
+Date: 02.08.1996 
+Hallo, hier nun auch noch ein paar deutsche Worte zu xlinux.
+
+xlinux ist eine von mir veraenderte MiniLinux Version. Was ist MiniLinux?
+Lesen Sie dazu bitte auch die Datei Minilin.txt. MiniLinux und somit auch
+xlinux ist eine fast vollstaendige Linux Distribution, die auf einem be-
+stehenden DOS-Filesystem aufsetzt. Das Bereitstellen (Backup/Fdisk/Format)
+einer separaten Linux Partition entfaellt ersatzlos. Der Kernel unterstuetzt 
+IDE, SCSI, CSLIP, SLIP, PPP, div. CDROM's, etc. 
+Das System enthaelt auch XWindows. Die Installation ist kinderleicht...
+Ins Ziellaufwerk gehen...
+unrar x xlinux  (Entpackt xlinux von xlinux.rar/r0n)
+del xlinux.r??  (die koennen geloescht werden)
+
+jetzt kann linux durch Aufruf von linux.bat <drive z.B. c/d/e> gebootet werden.
+Der Laufwerksbuchstabe MUSS eingegeben werden!!!
+Dabei wird DOS aus dem Speicher entfernt. Zurueck nach DOS geht
+es mit CTRL-ALT-DEL...
+login: root	(root eintippen...)
+
+Das System ist auf US Tastatur, Maus an com1, Modem an com2, US-Eastern Time
+etc. eingestellt. Zur leichten Aenderung, das script /sbin/setup starten als
+root! Am besten direkt nach dem ersten einloggen!!!
+
+Das aktuelle System belegt ca. 85 MB auf der Platte. Fuer die Installation
+werden ca. 105MB freier Platz benoetigt!!!
+Fuer mein Aenderungen (ohne Aufraeumarbeiten) in englisch lesen Sie bitte die
+Datei xlinux.howto.
+
+Ich plane das System weiter zu pflegen und zu ergaenzen, wobei evtl.
+Ergaenzungen in Modul-Form als separat zu installierende tgz Dateien
+bereitgestellt werden.
+
+
+
+Folgende Bugs wurden bereinigt:
+Bei xfig fehlte das Export Programm fuer andere Formate (fig2dev).
+Bei xgrab fehlte das eigentliche Capture Programm xgrabsc.
+/bin/test und der link nach /bin/[ fehlten noch vom original MiniLinux.
+
+Folgendes ist nach dem 1. Juli 1995 ergaenzt worden:
+Crack der Passwort cracker.
+X_Mono Server. (Leider funktioniert X_VGA16 nicht mit allen Programmen?)
+(X_SVGA steht als separate tgz Datei zur Verfuegung...)
+NoName BBS Script (Login als guest oder /usr/bbs/Menu ausfuehren)
+xmodmap 		- X-Window keymaps fuer Deutschland und Spanien.
+Ghostscript (Zur Ausgabe auf HP Laserjet: pgs <name.ps>; Auf VGA: gs <name.ps>)
+             Postscript Ausgabe von Xfig/Xpaint auf VGA,Drucker etc...
+i2ps/nenscript 		- Konvertieren von ASCII nach Postscript.
+pstree 			- Gibt Verzeichnisbaum nach Postscript aus.
+Einige Scripts und Programme zum Druck auf HP Laserjets.
+p2p 			- Druck 2 Seiten ASCII pro Druckseite auf HP L.
+pap 			- Druck mit Fett/Unterstreichen auf HP L. 
+GNU awk - Sprache.
+Perl 			- Die Script Sprache.
+Lynx 			- WWW Client fuer ASCII Mode mit LOKALER Home Page.
+XMosaic 		- X11 WWW Client mit LOKALER Home Page.
+
+Folgendes ist nach dem 1. September ergaenzt worden:
+/usr/TeX/* 		- Eine minimal TeX Distribution...
+/usr/bin/texmgr 	- TeX Menu mit dialog.
+/usr/bin/ssfile 		- einfache B-Tree ISAM Datenbank.
+/usr/bin/xc 		- Terminalprogram a la Minicom.
+/usr/bin/flip 		- fli + flc player svgalib.
+/usr/bin/pcdview 	- PhotoCD Bild Betrachter.
+/usr/X11/bin/xhtalk 	(Wer ist noch eingelogged in Netz...)
+/usr/X11/bin/xsysinfo (System Info Display)
+/usr/X11/bin/axe 	(Ein besserer X-Editor)
+/usr/X11/ghostview 	(X Postscript Betrachter)
+/usr/bin/xgs 		(Postscript Interpreter fuer ghostschript)
+leider fehlt mir gs mit x11, linux ,laserjet, deskjet, tiffg3 etc Treibern,
+daher muss ich leider /usr/bin/gs plus /usr/bin/xgs verwenden...
+Eine neuere SVGALIB plus svgalib config Datei.
+/usr/bin/3d 		- Demo zur SVGALIB.
+/usr/lib/pictures/winkill.jpg - Win Kill from IBM employee.
+Parameter :mx#0: in /etc/printcap fuer Spooldateien (gs) > 1MB.
+/sbin/setup plus *config scripts zur Einstellung von Tastatur, Maus, Modem,
+Xconfig, svgalib config, Zeitzone, Swapspace und Netzwerk.
+
+
+
+Folgendes ist nach dem 1. November 1995 ergaenzt worden:
+/usr/src/Crack* ist geloescht - kein Interesse...
+/usr/bin/xgs ist geloescht. /usr/bin/gs kann jetzt auch auf x11 ausgeben.
+/usr/bin/fax 		- script zum fax senden, empfangen, drucken, ansehen.
+/usr/bin/efax 		- s.o. fuer Hilfe: fax help eingeben.
+/usr/bin/efix 		- s.o.
+/usr/bin/rot13 		- simple ascii file scrambler.
+/usr/bin/crypt 		- bessere s.o.
+/usr/bin/makekey 	- wird von crypt gebraucht.
+/usr/bin/tcx + untcx 	- lies /Library/tcx.howto.
+/usr/bin/lbu + /usr/lib/LBU/* - linux backup utility.
+/sbin/cdromconfig 	- cdrom device config.
+/usr/bin/a2gs;a2x 	- ascii nach postscript 
+/usr/local/Minerva/* 	- mSQL Datenbank zum Ueben mit der SQL Datenbank Sprache
+/usr/X11/bin/oleo 	- oleo spreadsheet
+/usr/local/InterViews/*
+-- doc - Textverarbeitung WYSIWYG mit LaTeX output! Grafiken und Tabellen
+         werden unterstuetzt.
+-- idraw - Zeichenprogramm das auch mit doc zusammenarbeitet! Ausgabe kann
+           auch direkt mit bmv/dgs/ghostview angesehen und mit pgs gedruckt
+           werden.
+neuer Kernel 1.2.1
+
+Ab 1.3.96 ergaenzt:
+neuer Kernel 1.2.13
+neue /lib/libc+m.so.4.6.27
+/usr/lib/tex/xspread.tex+Gentle.tex+etc...
+/usr/local/bin/xlispstat 	- Statistik Paket siehe LJ Artikel
+/usr/local/lib/xlispstat/*
+/lib/libX11.so.6* 		- X11R6 aout lib for xlispstat
+/usr/sbin/httpd 		- NCSA HTTP daemon
+/usr/dos/httpd/* 		- some docs
+/var/httpd/* 			- conf etc...
+/usr/bin/mc 			- neuere Version; jetzt noch NC aehnlicher!
+/usr/bin/joe 			- joe's own editor - Wordstar (TM) kompatible Steuerung!
+/usr/lib/joe/*
+/usr/bin/wine 			- Der Windows Emulator (in aelterer Version!)
+/usr/bin/sysres.dll 		- wird von Wine benoetigt!
+/etc/wine.conf 			- Konfigurationsdatei fuer Wine.
+(Vor Start von z.B. sol.exe, muss das Laufwerk auf dem Windows installiert ist
+unter /c gemountet werden. Z.B. mount -t msdos /dev/hda1 /c)!!!
+
+
+
+Ab 1.4.96 ergaenzt:
+/usr/local/lib/nexs/* 		- the network spreadsheet (evaluation copy only)
+/Library/nexs.txt 		- see this for more information for full version
+/Library/*.ps 			- Linux Crash Kurs in Deutsch; Linux User Guide; 
+				   Info-sheet
+/usr/lib/pictures/* 		- several more pictures
+/usr/local/linuxdoc-sgml/* 	- the linux doc projects file
+/usr/lib/html/UserGuide/* 	- XMosaic User Guide; Load Local XMosaic.0.html
+/usr/bin/mpeg_play 		- Software MPEG Player
+/usr/bin/rcs,rcsdiff,ci,co... 	- Revision Control System
+/usr/bin/xcbb 			- Startet cbb - Kontofuehrungsprogramm englisch/X11
+/usr/lib/cbb/* 			- s.o.
+/usr/local/cbb/* 		- s.o.
+/usr/bin/groff*...		- troff,nroff Textkonvertierer
+/usr/X11/bin/xhtml		- HTML Editor
+/usr/X11/bin/calctool		- Komfortabler Taschenrechner
+/usr/X11/bin/xless		- less/more unter X11
+/usr/local/bin/cman		- Kontakt Manager (Adressmanager)
+/usr/bin/ecu			- Terminalprogramm mit Kermit send/receive
+/usr/local/bin/cr		- Crisp Editor (auch xcr fuer X11)
+/usr/bin/bwbasic		- Basic Interpreter
+/usr/bin/chess			- Gnuchess 
+/usr/local/pcemu		- DOS Emulator
+/usr/X11R6/lib/*		- X11R6 Libraries...
+/usr/bin/udo			- DER Textkonvertierer nach HTML,rtf,tex,man...
+/lib/libc/m.so.5			- ELF Libraries + neuer ld.so...
+
+
+Ab 1.7.96 ergaenzt:
+/usr/local/casio		- Datenaustauch von und zu CASIO Organizern
+/usr/local/dbview		- Ansehen und Konvertieren von Dbase Dateien
+/usr/bin/ansi			- Ansi Draw - Zeichenprogramm fuer Ansi Screens
+/usr/bin/tde			- Editor auch fuer Binaerdateien
+/usr/bin/ldlas			- Statistikprogramm fuer ASCII-Oberflaeche
+/usr/andrews/ez*		- Andrews User Interface System - Wordprocessor ez + Tools
+/usr/bin/edit			- Deutscher Editor ala DOS-EDIT s.u.
+/usr/local/e/e*			- s.o.
+/usr/local/lyx/*		- X11 deutscher Frontend fuer TeX/LaTeX
+/usr/X11/bin/xearth		- Die Erde als Root Background - nicht unter VGA16
+/usr/X11/bin/uc		- Unix Cockpit - Deutscher Dateimanager
+/usr/local/addressbook/*	- Mehrsprachiges Addressbuch als Tcl/Tk script.
+/usr/local/xinvest		- Anlageverwaltung fÅr Investments Fonts, Aktien etc.
+/usr/bin/gnuplot		- Der GNU Graphen Plotter. Wird auch von ldlas genutzt
+/Library/info/*			- Mehr Doku - Auch Linux Guide in Deutsch!
+/vmlinuz			- Neuer Kernel 2.0.0
+/lib/modules/...		- Module fuer Kernel 2.0.0
+/usr/local/pql/*		- SQL like Datenbank
+/usr/local/plan/*		- Terminkalendar fuer X11
+/usr/X11/bin/xmgr		- Plotting Programm fuer X11
+/usr/local/pgp/*		- Pretty Good Privacy
+/usr/bin/zgv			- Bildbetrachter fuer SVGA
+
+Anhang - 2. Fragen und Antworten...
+
+
+Frage: Warum kann ich Linux nicht auf meiner EIDE Festplatte installieren?
+
+Antwort: Wenn Sie eines der verschiedenen "Diskmanager/OnTrack" Programme
+benutzen, die vielen EIDE Laufwerken beigelegt sind, koennen Sie das Laufwerk 
+nicht fuer Linux benutzen, bis Sie es entfernt haben. Diese Programme sind nur, 
+damit DOS mehr als 512MB verwalten kann und machen das Laufwerk unbrauchbar 
+fuer andere Betriebssysteme wie z.B. linux und OS/2.
+
+Dieses Problem zu beheben: 
+Vom Festplatteninhalt ein Backup anzufertigen, den Bootrecord mit fdisk /MBR 
+loeschen, neu formatieren und dann alles reinstallieren.
+
+Einige der neueren 1.3.x Kernel kînnten auch funktionieren, einfach ausprobieren.
+
+-----
+
+Frage: Warum wird mein Sony CDU-31/33A nicht mehr von Linux erkannt?
+
+Antwort: Die Autodetection fuer das CDU-31/33A wurde entfernt. Die
+Konfiguration fuer das CD-ROM muss jetzt ueber loadlin manuell
+erfolgen:
+
+C:\LOADLIN\LOADLINX C:\LINUX\VMLINUZ root=c: cdu31a=0x1f88,0,PAS
+
+-----
+
+Frage: Ich kann meinen Kernel nicht dazu bringen, die CD-ROM zu erkennen, die am 
+Soundblaster 16 IDE angeschlossen ist!
+
+Antwort: Vergewissern Sie sich zunaechst, ob Sie auch den richtigen Kernel benutzen. 
+In diesem Fall brauchen Sie den IDE/ATAPI CD-ROM Kernel und nicht den SBPCD 
+Kernel. Wenn Sie dann immer noch Probleme haben sollten, benutzen Sie den zweiten 
+IDE Kanal (IRQ15 0x170) and vergewissern Sie sich, dass das Laufwerk als Master
+gesetzt ist (Jumper an der Rueckseite) und nicht als Slave (Default-einstellung!).
+
+------
+
+Frage: Warum wird eine UltraStor SCSI nicht erkannt? Unter DOS geht es...
+
+Antwort: Stellen Sie die I/O Adresse auf 0x340 statt auf 0x330.
+
+Wenn Hardware nicht funktioniert ist es eine gute Regel die IRQ und I/O  Einstellungen 
+zu Ñndern, um zu sehen was passiert. Sie koennen auch andere Bootkernels versuchen.
+
+-----
+
+Frage: Mein Backspace benimmt sich sonderbar unter X. Wie kann ich das beheben?
+
+Antwort: Versuchen Sie folgendes in .Xmodmap in /usr/X11/lib/X11/xinit oder $HOME:
+keycode 22 = Backspace.
+
+------
+
+
+
+Frage: Ich verwende UMSDOS und moechte denselben Swapplatz fÅr Windows und 
+Linux nutzen?
+
+Antwort: Wenn Sie eine Linux-UMSDOS Swapdatei mit MS-Windows teilen
+wollen, koennen Sie folgendes tun:
+
+1. Schaffen Sie eine PERMANENT-SwapDatei in MS-Windows mit der
+Groesse von NNNN Kilobytes.
+2. Fuegen Sie folgende Zeilen in /etc/rc.d/rc.local ein:
+ 
+  rm -f /DOS/windows/sparet.par  <---Erforderlich um die Windows- 
+                                     Beanstandung beim naechsten  
+                                     Start zu underdruecken
+  mkswap /DOS/386spart.par NNNN
+  sync
+  swapon /DOS/386spart.par
+3. Fuegen Sie "swapoff" fuer diese Datei in /etc/rc.d/rc.0
+
+-----
+
+Frage: Wie kann ich die color ls veraendern?
+
+Antwort: Schauen Sie in die Datei /etc/DIRCOLORS. Sie duerfen die Farben wie Sie wollen 
+einstellen, oder sie ganz abschalten.. Sie koennen /etc/DIR COLORS in Ihr $HOME
+Verzeichnis als '.dir_colors' auch kopieren, um persînliche Einstellungen zu ermîglichen.
+
+-----
+
+
+
+ToDo:
+
+
+Eine neuerer Windows Emulator Wine waere schîn.
+
+Ein neuerer X11 WWW-Client.
+
+Java UnterstÅtzung.
+
+
+
