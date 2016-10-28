@@ -33,6 +33,15 @@ CTRL-ALT-BS
 
 CTRL-ALT-DEL
 
+---------------
+--- C-Compiler ---
+
+c245.tgz im / root-Verzeichnis entpacken mit tar zxvf c245.tgz
+
+Dann sh install/doinst.sh ausführen.
+
+
+---------------
 --- Deutsch ---
 
 Hallo, bitte hiernach erst einmal \xlinux.txt lesen!
@@ -68,6 +77,8 @@ CTRL-ALT-BS - beendet X-Windows
 
 ...
 
+
+---------------
 --- English ---
 
 Start install.bat with just the destination drive letter. Eg: install c
