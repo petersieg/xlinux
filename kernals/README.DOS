@@ -1,1 +1,173 @@
-test...
+Diese Liste beschreibt die Kernels, die im System installiert werden koennen.
+Die Installationskernels haben nicht alles drin, um Speicher zu sparen; so
+fehlen manche Streamer, Maeuse, SLIP usw.
+
+
+Alle Kernels haben Unterstuetzung fuer:
+---------------------------------------
+
+Alle Busmäuse
+ATAPI CD-ROM-Laufwerke
+Alle Streamer (EIDE und Ftape; bei SCSI auch SCSI-Streamer)
+SLIP und PPP
+Paralleler Drucker (ausser PLIP-Kernel)
+Weitere Treiber (z.B. Soundunterstützung) über ladbare Module
+
+Bei allen Kerneln koennen die proprietaeren CD-ROM-Laufwerke durch den
+Parameter "onlycd=none" abgeschaltet werden. Durch explizite Angabe von
+z.B. "onlycd=cdu31a" kann das Probing auf das verwendete Laufwerk
+eingeschraenkt werden.
+
+============================================================================
+                                SCSI-1
+============================================================================
+
+Alle (proprietären) CD-ROM-Laufwerke
+Alle Netzwerkkarten (incl. Token Ring und Arcnet)
+Folgende SCSI-Adapter:
+    Alle Adaptec
+    EATA-DMA (DPT, NEC, ATT, Olivetti)
+    EATA-PIO (old DPT PM2001, PM2012A)
+    EATA ISA/EISA (DPT PM2011/021/012/022/122/322)
+    Future Domain 16xx (auch Adaptec 2920)
+    NCR 53c{7,8}xx
+    PAS16
+    Seagate ST-02 und Future Domain TMC-8xx
+
+============================================================================
+                                SCSI-2
+============================================================================
+
+Alle (proprietären) CD-ROM-Laufwerke
+Alle Netzwerkkarten (incl. Token Ring und Arcnet)
+Folgende SCSI-Adapter:
+    AdvanSys
+    Buslogic
+    DTC 3280
+    UltraStor 14F/34F
+    UltraStor (sonstige)
+    Always IN2000
+    QLogic
+    Trantor T128/T128F/T228
+    7000FASST
+    NCR53c406a
+    AM53/79C974
+
+============================================================================
+                                SCSI-3
+============================================================================
+
+Wie SCSI 1, jedoch keine Unterstützung von Netzwerkkarten
+
+============================================================================
+                                SCSI-4
+============================================================================
+
+Wie SCSI 2, jedoch keine Unterstützung von Netzwerkkarten
+
+============================================================================
+                                SCSI-5
+============================================================================
+
+Spezialkernel für NCR 53C400
+Alle (proprietären) CD-ROM-Laufwerke
+Alle Netzwerkkarten (incl. Token Ring und Arcnet)
+
+============================================================================
+                                SCSI-6
+============================================================================
+
+Spezialkernel für IOMEGA ZIP Drive am parallelen Port
+Kein Drucker am parallelen Port
+Alle (proprietären) CD-ROM-Laufwerke
+Alle Netzwerkkarten (incl. Token Ring und Arcnet)
+
+============================================================================
+                                SCSI-7
+============================================================================
+
+Spezialkernel mit Alpha-Treiber für GDT Raid SCSI Disk Array Controller
+Alle (proprietären) CD-ROM-Laufwerke
+Alle Netzwerkkarten (incl. Token Ring und Arcnet)
+
+============================================================================
+                                SCSI-8
+============================================================================
+
+Kernel für AHA2940UW; dieser Kernel enthält keine weiteren SCSI-Treiber.
+Alle (proprietären) CD-ROM-Laufwerke
+Alle Netzwerkkarten (incl. Token Ring und Arcnet)
+
+============================================================================
+                                SCSI-9
+============================================================================
+
+Wie SCSI 8, jedoch keine Unterstützung von Netzwerkkarten
+
+============================================================================
+                                SCSI-10
+============================================================================
+
+Wie SCSI 6, jedoch keine Unterstützung von Netzwerkkarten
+
+============================================================================
+                                IDE-1
+============================================================================
+
+Alle (proprietären) CD-ROM-Laufwerke
+Alle Netzwerkkarten (incl. Token Ring und Arcnet)
+
+============================================================================
+                                IDE-2
+============================================================================
+
+Keine (proprietären) CD-ROM-Laufwerke (nur ATAPI-Laufwerke)
+Alle Netzwerkkarten (incl. Token Ring und Arcnet)
+
+============================================================================
+                                IDE-3
+============================================================================
+
+Wie IDE-1, aber zusaetzlich Unterstützung fuer spezielle EIDE Chipsätze
+Alle Netzwerkkarten (incl. Token Ring und Arcnet)
+
+============================================================================
+                                IDE-4
+============================================================================
+
+Absoluter Minikernel
+Keine (proprietären) CD-ROM-Laufwerke
+Keine Netzwerkkarten
+PLIP-Unterstützung
+Für 4 MB Rechner zu verwenden
+
+============================================================================
+                                IDE-5
+============================================================================
+
+Wie IDE-1, jedoch keine Unterstützung von Netzwerkkarten
+
+============================================================================
+                                IDE-6
+============================================================================
+
+Wie IDE-2, jedoch keine Unterstützung von Netzwerkkarten
+
+============================================================================
+                                IDE-7
+============================================================================
+
+Wie IDE-3, jedoch keine Unterstützung von Netzwerkkarten
+
+-------------------------------------------------------------------------------
+
+Die Kernels SCSI-1 bzw. SCSI-2 sollten auf praktisch jeder Hardware lauffähig
+sein; jedoch sind diese Kernels vergleichsweise groß.
+
+Generell sollte ein möglichst kleiner Kernel gewählt werden, denn je mehr
+freier Speicher verfügbar ist, desto schneller läuft die Installation ab.
+
+So dürfte bei den meisten Rechnern ohne SCSI einer der Kernels IDE-5/6/7 der
+empfehlenswerteste sein, es sei denn, die Installation soll via NFS
+ablaufen. Nachdem heutzutage fast nur noch sogenannte ATAPI-Laufwerke
+vertrieben werden, ist Kernel IDE-6 für solche Rechner wohl die beste Wahl.
