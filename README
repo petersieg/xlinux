@@ -1,0 +1,332 @@
+May the spirit of Linux and GNU and all supporting peoble be with you...
+No liability for any damage and/or loss of data or whatsoever caused by the
+use of this distribution. Its all at your own risk.
+
+This small HOWTO file was compiled from:
+Peter Sieg		
+Rabishauerstr.9
+D-37603 Holzminden
+GERMANY
+Please, if you try Xlinux send me a postcard with a small comment...
+Also bug fixes are highly welcome.
+
+Source code is available from sunsite.unc.edu/pub/Linux, tsx-11.mit.edu and
+various CD-ROM's.
+
+Mini Linux will not work with DBLSPACE. Uncompress your drive first.
+
+There are two howto files in the /Library directory:
+hardware.howto	(english)	explains hardware related questions.
+german.howto	(german)	explains german user questions.
+
+To install this distribution:
+Space required during installation app. 68 MB.
+Space required after installation app. 48 MB.
+Since Version V951101, all disk except the last one are higher formatted
+with the 2m tools (1,8 MB). To access the disk, you must insert the last
+disk first and do a a:\2m.com to install the driver. This driver can also
+read and write all other formats transparantly...
+x:  (where x is your destination drive to install to)  
+md \tmp  (if not already exist)
+cd \tmp
+Now for all disk:
+copy a:\*.*
+unrar x xlinux 
+del xlinux.r??
+Now you can start linux with linux.bat <x>!!!
+
+ATTENTION:
+Now you can easily setup your keyboard layout, mouse, modem, timezone,
+cdrom, swapspace and network by running the setup script in /sbin. 
+This script as the related *conf* scripts are adapted from the Slackware 
+distribution.
+See the copyright notice in setup. - Many thanks to Patrick Volkerding!
+
+It will load the portugese keymap. To change to us:
+temporarily execute:
+/usr/bin/loadkeys /usr/lib/kbd/keytables/us.map
+('/' key is '" key...)
+than change file /etc/rc.d/rc.keymap...
+I did that already...
+I also added de.map (German) and es.map (Spanish) to the directory...
+X uses a file called .Xmodmap under dir:
+/usr/X11/lib/X11/xinit/
+If nothing is there it uses us layout.
+I copied xmodmap.gr, *.uk etc in that dir. Please just rename if needed.
+
+/dev/modem is linked to /dev/cua1 which is for dos users com2.
+to change for example to com1 do:
+rm /dev/modem; ln -s /dev/cua0 /dev/modem
+
+/dev/mouse is linked to /dev/ttyS0 which is for dos users com1.
+to change to com2 etc. do:
+rm /dev/mouse; ln -s /dev/ttyS1 /dev/mouse
+
+X Version is X11R5!!
+Xwindows: my mouse did not work. caused by selection program started in
+/etc/rc.d/rc.local
+just comment the lines out and restart.
+Xwindows needs at least 8MB of memory. If you have less you should use
+a swapfile:
+dd if=/dev/zero of=/swapfile bs=1024 count =4096 # or 8192...
+mkswap /swapfile 4096
+sync
+swapon /swapfile
+# Only the last command have to be repeated each time you boot!!
+# or put the folowing line in /etc/fstab:
+/swapfile	none	swap	defaults
+# or use the script swap <size_in_bytes> in /usr/bin...
+# if you dont specify the sizes, just swapon /swapfile will be executed!
+
+The following have been removed:
+/bin/more (now a link to /usr/bin/less)
+/usr/bin/zip
+/usr/bin/zipnote
+/usr/bin/zipsplit
+/usr/bin/lharc
+/usr/bin/zoo
+/usr/bin/*less*
+/usr/bin/*joe*
+/usr/lib/joerc
+/usr/lib/setup/* (replaced with /sbin/*conf* and /sbin/setup)
+/bin/dir (replaced with scripts ls -l $1)
+/usr/local/bin/* (utree)
+/usr/local/lib/utree.*
+/var/adm/packages/*
+/var/adm/disk_contents..
+/root/xmosaic (don't worry; back in right dir and with local home page!)
+/usr/lib/lynx..
+/usr/bin/lynx (again don't worry; back with local home page!)
+/usr/bin/tin
+/usr/bin/indent
+/bin/bash (replaced with ash)
+/usr/X11/bin/XF86_SVGA (replaced with XF86_Mono)
+
+The following programs have been added:
+/usr/X11/bin/XF86_Mono (as a replacement for XF86_SVGA)
+/bin/ash (as a replacement for bash)
+/bin/test (needed by a lot programs? was missing?)
+/bin/[ ( link to /bin/test for better readability)
+/usr/bin/less (the better more)
+/usr/bin/basic (ChipMunk Basic Interpreter V1.0)
+/usr/bin/sc (The spreadsheet program V6.21)
+/usr/bin/ssfile (A flat file B-Tree data base program that uses ncurses)
+/usr/lib/ssfile/ (examples and documentation for ssfile)
+/usr/bin/mc (Norton Commander Clone - Excellent!!! - new Version since 1996)
+/usr/bin/xc (Communication Program)
+/usr/bin/flip (plays fli + flc animations with svgalib - not tested.)
+/usr/bin/mpeg_play (play mpg software video files)
+/usr/bin/pcdview (displays PhotoCD images with svgalib - not tested.)
+/usr/TeX/* (Small TeX distribution...)
+/usr/bin/texmgr (TeX Menu using dialog)
+/usr/bin/lynx (Character mode WWW client with /usr/lib/html/home.html home page)
+/usr/local/lib/lynx.cfg (config file for above...)
+/usr/local/lib/*libvga.config (svgalib config file + setup template)
+/usr/games/lr (lode runner game svgalib)
+/usr/bin/3d (svgalib demo)
+(Note: for the two games above, go in the binary directory before starting the game!)
+/usr/X11/bin/xspread (same as SC under X)
+/usr/X11/bin/oleo (oleo spreadsheet from GNU)
+/usr/X11/bin/xcalc (X calculator)
+/usr/X11/bin/xeyes (I love this...)
+/usr/X11/bin/xtetris (nice game)
+/usr/X11/bin/xpool (pool table game)
+/usr/X11/bin/xtron (tron like game)
+/usr/X11/bin/xmessage (might be usefull)
+/usr/X11/bin/xtalk (same as talk under X)
+/usr/X11/bin/xgrab (X screen copy)
+/usr/X11/bin/xsysinfo (System info display)
+/usr/X11/bin/xhtalk (See who is talking too - needs file .xhtalk under your home dir)
+/****************************************/
+/* sample configuration file for xhtalk */
+/* names of the hosts to be searched on .. */
+host { 	
+	"slip1","slip2"      /* local hosts        */
+}
+/* login names of the users to be searched for ..   */
+name {
+	"root",
+	"sysop",
+ 	"guest"
+}
+/usr/X11/bin/xedit (Tiny X editor)
+/usr/X11/bin/axe (A better xeditor)
+/usr/X11/bin/xcoral (A very good xeditor)
+/usr/X11/bin/ghostview (Postscript viewer)
+/usr/X11/bin/xhtml (A html editor)(removed as extra tgz file)
+/usr/X11/bin/xmosaix (WWW client; loads /usr/lib/html/home.html)
+                     (when called from fvwm)!
+/usr/lib/html/UserGuide/* (XMosaic User Guide; load local XMosaic.0.html)
+/usr/X11/bin/xfig (Drawing program)
+/usr/X11/bin/fig2dev (Converts *.fig files to various other formats ex: *.ps)
+/usr/X11/bin/xv (Picture manipulations)
+/lib/libgr.so.1 (needed for xv)
+/usr/X11/bin/xpaint (Painting program)
+/lib/libXpm.so.4 (needed for xpaint)
+/usr/bin/SuperProbe (identifies your display adapter...)
+/usr/bin/seejpeg (jpeg... viewer. try run startrek...)
+/usr/bin/tclsh (tcl shell)
+/usr/lib/libtcl.so.3 (needed for tclsh)
+/usr/bin/wish (tk shell)
+/usr/lib/libtk.so.3 (needed for tk shell wish)
+/usr/lib/tk/demos/* (some demos) 
+#you need to place -font fixed before every -text statement!!
+/usr/bin/awk (is GNU-awk; required by Crack)
+/usr/bin/perl (the script language V4.036)
+/usr/bin/sqprint (perl script to print on HP PCL printer two pages on one in
+                  landscape format: ex: cat /howto | sqprint | lpr)
+/usr/bin/p2p (does the above ex: cat $1 | sqprint | lpr)
+/usr/bbs/* (NoName very small bbs program script; follow instructions!)
+/usr/bin/deliver (small local! mail delivery program)
+/usr/bin/mail (Mail/mailx...to make it work it wrote this script:
+/usr/bin/sendmail  
+#!/bin/sh
+deliver $2
+#then ln -s /usr/bin/sendmail /usr/lib/sendmail
+/usr/bin/gs (ghostscript postscript interpreter plus several other files)
+/usr/lib/ghostscript/* (files needed for gs plus examples; gs -h for help)
+                       (try gs /usr/lib/ghostscript/examples/tiger.ps)
+/usr/bin/pgs (print postscript files to lpr; param 2 is device name from gs -h)
+             (You have to enter <return> and quit manually until solved...)
+             (This is solved: specified quit.ps after ps file in pgs...)
+             (Also put :mx#0: in /etc/printcap to spool files > 1MB!!!)
+/usr/bin/dgs (output postscript files to linux svgaconsole)
+/usr/bin/pstree (Perl script - convert/print dir-tree info in postscript)
+/usr/bin/i2ps (Perl script - convert/print ascii files to postscript)
+/usr/bin/nenscript (program to print ascii files to postscript)
+/usr/bin/pstext (script calls nenscript to cvt ascii to ps; stdout)
+/usr/bin/a2ps (another script calling nenscript...)
+/usr/bin/mpage (print multiple pages of ascii files to postscript)
+/usr/bin/a2x* (ascii to postscript)
+/usr/bin/fax (scripts sends, receives, prints and views fax with efax,efix,gs)
+/usr/bin/efax + efix (used by above script)
+/usr/bin/rot13 (simple ascii file scrambler)
+/usr/bin/crypt (better ascii file scrambler)
+/usr/bin/makekey (needed by crypt)
+/usr/bin/tcx + untcx (on the fly exec compress/decompress using gzip)
+/usr/bin/lbu + /usr/lib/LBU/* (linux backup utility script using dialog)
+/usr/bin/cdrom (mount /dev/cdrom to /cdrom)
+/usr/bin/a: (mount msdos /dev/fd0 /a:)
+/usr/local/InterViews/*
+-- doc (Text processing WYSIWYG; output LaTeX compatible)
+       (ca also include drawings etc.)
+-- idraw (Drawing program; works with doc; output EPS)  
+/usr/local/Minerva/*
+/usr/local/Minerva/bin/msql - interactive SQL database manipulation tool
+/usr/local/Minerva/bin/msqld - SQL database backend server 
+/usr/local/Minerva/bin/msqladmin - SQL database adminstration tool
+( start msqld with: #msqld &)
+( try msql;select num from test; \g)
+( try msql;insert into test(num) values (13) \g)
+/usr/local/bin/xlispstat - statistical analysis
+/usr/local/lib/xliststat/*
+/usr/local/sbin/httpd - NCSA HTTP daemon
+/usr/doc/httpd/*
+/var/httpd/*
+/usr/bin/joe - joe's own editor - Wordstar (TM) commands!
+/usr/lib/joe/* 
+/usr/bin/wine - the windows emulator (sorry older version = just sol.exe?)
+/usr/bin/sysres.dll - needed by wine
+/etc/wine.conf - as the name says...
+/usr/local/lib/nexs - the network spreadsheet - evaluation copy only
+                      see file /Library/nexs.txt
+/usr/local/linuxdoc-sgml/* - the linux doc project files and programs
+/usr/bin/ci,co,rcs,rcsdiff... - the rcs = revision control system
+/usr/bin/xcbb - starts the check book balancer programm (X11!)
+/usr/local/cbb/*
+/usr/lib/cbb/*
+/usr/bin/groff... - the text formatter...with utilities...
+/usr/bin/man - a simple shell script to look for a man page
+(MANPATH is set in /etc/profile to /cdrom/man, since the man pages are only on
+ the cdrom included!
+)
+/usr/bin/chess - the GNU chess programm for text console
+/usr/bin/bwbasic - basic interpreter
+/usr/local/bin/cman* - Rolodex Contact manager uses Curses
+/usr/bin/ecu - Terminalprogramm also incl. Kermit sr
+/usr/local/lib/ecu* see above
+/usr/local/bin/*cr - crisp editor plus xcr for X11
+/usr/local/lib/crisp/* - see above
+/usr/local/pcemu - DOS Emulator under X11 for Textprograms only!
+/usr/X11R6/lib - X11R6 libraries needed also by pcemu...
+/usr/bin/udo - Text Converter to html,rtf,man,tex,asc,...... Excellent!
+/Library/*udo* - some information on udo...
+
+This packages/programs i would like to include in this distribution:
+PCMCIA support thru loadable kernel modules.
+Newer WINE binary.
+
+If you like to install other packages, i did it the following way:
+# Because the cdrom on my computer did not work at the time...
+I selected the appropriate packages <*.tgz> and copied them with the 
+windows filemanager from a cdrom to disk a:
+Then i started linux:
+With cd /tmp i go into the tmp directory.
+With mcopy a:<package.tgz> <package.tgz> i copied the file(s) into
+the current directory.
+With tar -zxvf <package.tgz> i uncompressed and untared them.
+Now you will see several directories and files in the /tmp directory.
+Try the executables and if you want to keep them move all neccessary
+files to their directories ex: /tmp/usr/bin/ash -> /usr/bin/ash.
+
+For working with dos floppy disk to can use the mtools:
+ex: mdir a: - directory of drive a:
+    mread -t a:howto howto - read file howto from a: to current directory
+    mwrite -t howto a: - write file howto to drive a:
+(-t switch translates <lf> to <cr><lf> and vice versa...)
+
+For DOS users i made a link from del to rm and from copy to cp.
+That means you can use del to delete files and copy to copy them.
+Also md is linked to mkdir and rd to rmdir.
+
+You can print ascii files with following command:
+p <filename> ;this is just a script under /usr/bin that inserts a <cr> at
+the end of each line and then calls lpr.
+This is the script p:
+#!/bin/sh
+cat $1 | sed -e s/$/^M/ | lpr
+# ^M is CTRL-M; Use CTRL-V, CTRL-M in vi.
+There is also a small script called pap under /usr/bin to allow printing
+of attributes like bold and underline. In your text include:
+.B for bold on
+.b for bold off
+.U for underline on
+.u for underline off
+The script simply replaces this strings with the appropriate control codes.
+Currently the codes are set for HP Laserjet PCL and testet with HP Laserjet 4L.
+Under /root is a small print.test file. Try pap print.test.
+
+You get help on commands by run <cmd> --help or -?.
+
+Try working with scripts together with the dialog program, see ex.
+under /var/adm/scripts.
+
+There is a nice monitor program. run top.
+
+If you know Norton Commander run mc.
+
+Try the game sasteroids.
+For the game lr, please cd /usr/games first...
+The file svgalib.config is in /usr/local/lib!
+
+Workbone is nice audio cdrom player.
+
+There are some setup scripts in /var/adm/scripts/
+I used one to setup my cdrom (mitsumi).
+
+If you want to work on 2 sessions on one screen try splitvt.
+    
+To see if your mouse works, try test-mouse.
+
+To check if Xwindows would run try X -probeonly.
+If the message says, dot clock not found, update the lowes available
+dot clock reported by X -probeonly in file Xconfig at mode "640x480"!
+and the "800x600" mode as well! That should as least bring you up in X.
+In Xwindows you can abort with CTRL-ALT-BACKSPACE.
+The first time you should start with startx 2>startx.log.
+All messages from x will be logged in startx.log.
+I you like a nice background picture in your X desktop try:
+# xv -root -max -quit </usr/lib/pictures/picture_filename> &
+
+---------- to be continued ------------
+
