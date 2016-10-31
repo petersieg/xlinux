@@ -6,9 +6,13 @@ Just unrar it into \linux directory.
 Links:
 https://www.dim13.org/xlinux
 
---- testlin ---
+---------------
+testlin.exe
+
 Zum testen, ob das auf dem Zielsystem läuft, kann man testlin.exe nehmen. Das enthaelt in minimales System mit
 Setup+X11. 
+
+Man kann auch mit cd / - tar zxvf c245.tgz - sh install/doinst.sh - einen C-Compiler installieren.
 
 Zum Installieren:
 
