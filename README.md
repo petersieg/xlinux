@@ -12,7 +12,9 @@ testlin.exe
 Zum testen, ob das auf dem Zielsystem läuft, kann man testlin.exe nehmen. Das enthaelt ein minimales System mit
 Setup+X11 (VGA16 - startx). 
 
-Man kann auch mit cd / - tar zxvf c245.tgz - sh install/doinst.sh - einen C-Compiler installieren.
+Man kann auch mit cd / - tar zxvf /DOS/c245.tgz - sh install/doinst.sh - einen C-Compiler installieren.
+
+Und mit cd / - tar zxvf /DOS/sast.tgz - das tolle sasteroids Spiel.
 
 Zum Installieren:
 
