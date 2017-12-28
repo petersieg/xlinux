@@ -9,6 +9,7 @@ Just unrar it into root dir of hdd (will expand into \linux directory).
 Links:
 https://www.dim13.org/xlinux
 
+---------------
 Was ist in xlinux - Textbasierende Programme:
 
 ● Alles für DOS User...
@@ -66,6 +67,7 @@ Was ist in xlinux - Textbasierende Programme:
 ● Chess, Tetris, Sasteroids, lizards - Spiele
 
 
+---------------
 Was ist in xlinux - X11 Programme:
 
 ● X11R5 Server
