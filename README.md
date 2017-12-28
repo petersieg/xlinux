@@ -1,6 +1,6 @@
 # xlinux
 
-![Bild](https://github.com/petersieg/xlinux/blob/master/xlinux-3.jpg)
+![Bild3](https://github.com/petersieg/xlinux/blob/master/xlinux-3.jpg)
 
 xlinux distribution from 1996 as published in Chip 11/1996.
 This is an old, historical distribution with kernal 1.2.13 and X11R5, that runs on top of a dos file system.
