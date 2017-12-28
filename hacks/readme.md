@@ -1,1 +1,1 @@
-hacks on vip1710 & wrt54g
+hacks on wrt54g
