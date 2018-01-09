@@ -3,7 +3,7 @@
 ![Bild](https://github.com/petersieg/xlinux/blob/master/xlinux.jpg)
 
 xlinux distribution from 1996 as published in Chip 11/1996.
-This is an old, historical distribution with kernal 1.2.13 and X11R5, that runs on top of a dos file system. It was using a modem + pp connection at that time ;-) If you install it, use it in any way, improve it - I would like to hear from you. Just drop me a mail and probably send a picture of your installation too.
+This is an old, historical distribution with kernal 1.2.13 and X11R5, that runs on top of a dos file system. It was using a modem + ppp connection at that time ;-) If you install it, use it in any way, improve it - I would like to hear from you. Just drop me a mail and probably send a picture of your installation too.
 Just unrar it into root dir of hdd (will expand into \linux directory).
 
 Links:
