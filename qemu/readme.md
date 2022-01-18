@@ -14,3 +14,10 @@ For virtualbox:
 4. Create vmdk file: VBoxManage internalcommands createrawvmdk -filename ./xlinux.vmdk -rawdisk /dev/loop14p1
 5. Edit xlinux.vmdk -> replace "/dev/loop14p1" with "./xlinux.img"
 
+Just in case you need to remove hdd (moved to other place, etc.):
+1. remove hdd from virtual machine
+2. vboxmanage list hdds -> see hdds and uuids
+3. vboxmanage closemedium disk <uuid> --delete
+4. Move vmdk and img; attach to virtual machine.
+  
+  
