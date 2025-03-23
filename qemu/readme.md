@@ -1,6 +1,7 @@
 Here is a qemu disk image. Just unzip and:
 
 qemu -L pc-bios -hda xlinux-clean.img -no-reboot -m 128 -k en-us
+Newer: qemu-system-i386 -boot c -hda xlinux-clean.img -m 128
 
 Ist also has already c245.tgz = C compiler installed with some source file in /usr/src/c and /root/c.
 
@@ -8,7 +9,7 @@ Ist also has already c245.tgz = C compiler installed with some source file in /u
 
 For virtualbox:
 
-1. Combine 7z parts: cat xlinux* > ./xlinux.img
+1. Extract 7z parts to get xlinux.img
 2. Right click on xlinux.img -> einhängen (mount).
 3. mount -> show where mountet (ex: /dev/loop14p1)
 4. Create vmdk file: VBoxManage internalcommands createrawvmdk -filename ./xlinux.vmdk -rawdisk /dev/loop14p1
