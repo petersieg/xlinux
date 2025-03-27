@@ -8,7 +8,7 @@ Ist also has already c245.tgz = C compiler installed with some source file in /u
 
 NEW 2025:
 After app. 30 years, we now can have xlib developments.
-'''
+```
 Craete floppy disk image: mkfs.msdos -C floppy.img 1440
 Mount floppy image and copy all 3 tgz files into it: mkdir mnt. sudo mount -t msdos -o loop floppy.img mnt. cp *.tgz mnt
 umount mnt
@@ -20,7 +20,7 @@ tar zxvf xdev20.tgz
 cd /usr/src/c
 tar zxvf /mnt/x11test.tgz
 tar zxvf /mnt/c_banks.tgz - ioccc 1998 deobfuscated flight simulator. start with ./run.sh
-'''
+```
 
 ---
 
