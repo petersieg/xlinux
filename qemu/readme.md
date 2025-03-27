@@ -6,12 +6,28 @@ Newer: qemu-system-i386 -boot c -hda xlinux-clean.img -m 128
 
 Ist also has already c245.tgz = C compiler installed with some source file in /usr/src/c and /root/c.
 
+NEW 2025:
+After app. 30 years, we now can have xlib developments.
+'''
+Craete floppy disk image: mkfs.msdos -C floppy.img 1440
+Mount floppy image and copy all 3 tgz files into it: mkdir mnt. sudo mount -t msdos -o loop floppy.img mnt. cp *.tgz mnt
+umount mnt
+
+start xlinux. login root. 
+mount -t msdos /dev/fd0 /mnt
+cd /
+tar zxvf xdev20.tgz
+cd /usr/src/c
+tar zxvf /mnt/x11test.tgz
+tar zxvf /mnt/c_banks.tgz - ioccc 1998 deobfuscated flight simulator. start with ./run.sh
+'''
+
 ---
 
 For virtualbox:
 
-1. Extract 7z parts to get xlinux.img
-2. Right click on xlinux.img -> einhängen (mount).
+1. Extract archive parts to get xlinux-clean.img
+2. Right click on xlinux-clean.img -> einhängen (mount).
 3. mount -> show where mountet (ex: /dev/loop14p1)
 4. Create vmdk file: VBoxManage internalcommands createrawvmdk -filename ./xlinux.vmdk -rawdisk /dev/loop14p1
 5. Edit xlinux.vmdk -> replace "/dev/loop14p1" with "./xlinux.img"
