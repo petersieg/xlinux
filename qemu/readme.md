@@ -19,10 +19,10 @@ qemu-system-i386 -boot c -hda xlinux-clean.img -m 128 -fda floppy.img -vga cirru
 start xlinux. login root. 
 mount -t msdos /dev/fd0 /mnt
 cd /
-tar zxvf xdev20.tgz
+tar zxvf /mnt/xdev20.tgz
 cd /usr/src/c
 tar zxvf /mnt/x11test.tgz
-tar zxvf /mnt/c_banks.tgz - ioccc 1998 deobfuscated flight simulator. start with ./run.sh
+tar zxvf /mnt/c_banks.tgz - ioccc 1998 deobfuscated flight simulator. start with ./run2.sh pittsbur
 ```
 
 ---
