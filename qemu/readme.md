@@ -1,4 +1,4 @@
-Here is a qemu disk image. Just unzip and:
+Here is a qemu disk image. Just unzip (7z x xlinux-clean.zip.001) and:
 
 qemu -L pc-bios -hda xlinux-clean.img -no-reboot -m 128 -k en-us
 
