@@ -11,14 +11,14 @@ After app. 30 years, we now can have xlib developments.
 ```
 In host linux box with qemu installed:
 Create floppy disk image: mkfs.msdos -C floppy.img 1440
-Mount floppy image and copy all 3 tgz files into it: mkdir mnt. sudo mount -t msdos -o loop floppy.img mnt. cp *.tgz mnt
-umount mnt
+Mount floppy image and copy all 3 tgz files into it: mkdir mnt. sudo mount -t msdos -o loop floppy.img mnt. sudo cp *.tgz mnt
+sudo umount mnt
 qemu-system-i386 -boot c -hda xlinux-clean.img -m 128 -fda floppy.img -vga cirrus
 
 
-start xlinux. login root. 
-mount -t msdos /dev/fd0 /mnt
+start xlinux. login root.
 cd /
+mount -t msdos /dev/fd0 /mnt
 tar zxvf /mnt/xdev20.tgz
 cd /usr/src/c
 tar zxvf /mnt/x11test.tgz
