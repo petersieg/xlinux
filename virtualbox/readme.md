@@ -8,6 +8,14 @@ Unzip into ova file with: ./7zz x xlinux_virtualbox.zip.001
 
 ---
 
+Convert from raw/img to vdi: VBoxManage convertfromraw inputfile.img outputfile.vdi --format VDI
+
+Convert from vdi to raw/img: VBoxManage clonemedium --format RAW inputfile.vdi outputfile.img
+
+I could write such img file with dd to a real hdd (CF card with adapter) and boot from it.
+
+---
+
 This is already done and included in ova:
 
 ```
